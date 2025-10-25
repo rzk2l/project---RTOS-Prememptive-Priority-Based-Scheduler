@@ -23,7 +23,7 @@ void idle_thread(){
 
 void OSIdle(){
 	++g_idle_task;
-	__WFI();
+	//__WFI();
 }
 
 void OSInit(void* stackMem, uint32_t stackSize){

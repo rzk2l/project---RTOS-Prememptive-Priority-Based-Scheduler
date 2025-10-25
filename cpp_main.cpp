@@ -38,23 +38,24 @@ int cpp_main(void){
  }
 
 void main_blink(){
+	uint32_t volatile i;
 	while(1){
-		++g_task0_loops;
-		GPIOA->BSRR = GPIO_BSRR_BS5_Msk;
-		OSDelay(BSP_TICKS_PER_SEC/4);
-		GPIOA->BSRR = GPIO_BSRR_BR5_Msk;
-		OSDelay(BSP_TICKS_PER_SEC * 3/4);
+		for(i=1500; i != 0; --i){
+			GPIOA->BSRR = GPIO_BSRR_BS5_Msk;
+			GPIOA->BSRR = GPIO_BSRR_BR5_Msk;
+		}
+		OSDelay(1);	//BLOCK FOR 1 TICK
 	}
 }
 
 void main_blink2(){
+	uint32_t volatile i;
 	while(1){
-		++g_task1_loops;
-		GPIOA->BSRR = GPIO_BSRR_BS5_Msk;
-		OSDelay(BSP_TICKS_PER_SEC * 3/4);
-		GPIOA->BSRR = GPIO_BSRR_BR5_Msk;
-		OSDelay(BSP_TICKS_PER_SEC/4);
-		
+		for(i=3*1500; i != 0; --i){
+			GPIOA->BSRR = GPIO_BSRR_BS5_Msk;
+			GPIOA->BSRR = GPIO_BSRR_BR5_Msk;
+		}
+		OSDelay(50);	//BLOCK FOR 50 TICK
 	}
 }
 }
