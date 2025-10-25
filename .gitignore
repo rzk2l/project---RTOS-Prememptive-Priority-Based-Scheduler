@@ -1,0 +1,22 @@
+STM32CubeMX/Target_1/STM32CubeMX/MDK-ARM/STM32CubeMX.uvprojx
+STM32CubeMX/Target_1/STM32CubeMX/MDK-ARM/STM32CubeMX.uvoptx
+Class.h
+EventRecorderStub.scvd
+First project.uvguix.kyoji
+First project.uvoptx
+First project.uvprojx
+Target_1.cbuild-gen-idx.yml
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+Objects/
+DebugConfig/Target_1_STM32F401RETx_1.0.1.dbgconf
+RTE/_Target_1/RTE_Components.h
+RTE/Device/STM32F401RETx/STM32F401xBCDE_411xCE.dbgconf
+RTE/Device/STM32F401RETx/STM32F401xBCDE_411xCE.dbgconf.base@1.0.1
+STM32CubeMX/Target_1/First project.cgen.yml
+STM32CubeMX/Target_1/project.script
+STM32CubeMX/Target_1/STM32CubeMX/.mxproject
+STM32CubeMX/Target_1/STM32CubeMX/STM32CubeMX.ioc
+STM32CubeMX/Target_1/STM32CubeMX/Drivers/CMSIS/LICENSE.txt
+STM32CubeMX/Target_1/STM32CubeMX/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt
+STM32CubeMX/Target_1/STM32CubeMX/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt
