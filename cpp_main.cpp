@@ -28,9 +28,9 @@ int cpp_main(void){
 	BSP_init();
 	OSInit(stackIdleThread, sizeof(stackIdleThread));
 
-	OSThreadStart(&blink1, &main_blink, stackBlink, sizeof(stackBlink));
+	OSThreadStart(&blink1, &main_blink, 5, stackBlink, sizeof(stackBlink));
 	/* MAIN FUNCTION 2 STACK */
-	OSThreadStart(&blink2, &main_blink2, stackBlink2, sizeof(stackBlink2));
+	OSThreadStart(&blink2, &main_blink2, 2, stackBlink2, sizeof(stackBlink2));
 
 	OSRun();
 	

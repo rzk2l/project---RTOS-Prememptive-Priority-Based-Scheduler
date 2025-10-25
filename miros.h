@@ -6,6 +6,7 @@
 typedef struct {
     uint32_t* sp;
     uint32_t timeout; // IF TIMEOUT != 0, THREAD IS BLOCKED, IT COUNTS DOWN AT EVERY CLOCK TICK
+    uint8_t priority;
 } OSThread;
 
 typedef void(*OSThreadHandler)();   //THIS MEANS THAT OSThreadHandler IS FROM NOW ON A POINTER TO A FUNCTION THAT TAKES NO ARGUMENTS AND RETURNS NOTHING
@@ -23,6 +24,6 @@ void OSRun();
 // OSSched MUST BE CALLED WHEN INTERRUPTS ARE DISABLED
 void OSSched();
 
-void OSThreadStart(OSThread* me, OSThreadHandler threadHandler, void* stackMem, uint32_t stackSize);
+void OSThreadStart(OSThread* me, OSThreadHandler threadHandler, uint8_t threadPriority, void* stackMem, uint32_t stackSize);
 
 #endif
